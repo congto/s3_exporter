@@ -38,7 +38,7 @@ Edit the .env file to set up your S3 bucket name, Rclone configuration, and othe
 # Name of your S3 bucket
 BUCKET_NAME=your-s3-bucket-name
 
-# Name of the Rclone configuration
+# Ten cua section trong file cau hinh rclone 
 RCLONE_REMOTE=your-rclone-config
 
 # Interval for updating metrics (in seconds)

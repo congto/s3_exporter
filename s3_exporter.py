@@ -36,6 +36,7 @@ RCLONE_COMMAND = f"rclone lsl {RCLONE_REMOTE}:{BUCKET_NAME}"
 # Metrics for the files
 gauge_file_list = Gauge('s3_file_list', 'List of files in S3 bucket', ['filename'])
 gauge_file_last_modified = Gauge('s3_file_last_modified', 'Last modified timestamp of files in S3 bucket', ['filename'])
+gauge_file_size = Gauge('s3_file_size', 'Size of files in S3 bucket', ['filename'])
 
 # Regular expression to parse the lines from the rclone lsl output
 rclone_pattern = re.compile(r'\s*(\d+)\s+(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2}:\d{2})\.\d+\s+(.+)')
