@@ -78,7 +78,10 @@ def get_file_list():
 
                 # Add last modified timestamp metric for the file
                 gauge_file_last_modified.labels(file_name).set(file_timestamp)
-
+                
+                logging.debug(f"Size of file {file_name} : {size}")
+                # Add size for the file
+                gauge_file_size.labels(file_name).set(size)
             else:
                 logging.warning(f"Skipping malformed line: {file_info}")
 
